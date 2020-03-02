@@ -51,6 +51,7 @@
 
 
 **INSERT**- Introduce valores para los atributos seleccionados. Pueden ser resultado de una consulta, valores por defecto, o valores escritos (coincidiendo en orden los valores con los atributos).
+En MariaDB "INTO" es opcional, en PostgreS es obligatorio.
 
 ```SQL
 INSERT INTO <nombre-de-tabla> 
@@ -69,7 +70,7 @@ VALUES
 ('Japan', 'Asia', 'Tokyo');
 ```
 
-Ejemplo VALUES_2:
+Ejemplo SELECT:
 
 ```SQL
 INSERT INTO world
