@@ -41,3 +41,5 @@
 |                     | ```SQL   [CONSTRAINT <nombre-de-restricción>]       NOT NULL (<atributo1,atributo2>),   ```                                                                          |
 | **Clave ajena**     | establece restricciones sobre la clave ajena, solo puede tomar valores de la clave principal de referenciada o nulo                                                  |
 |                     | ```SQL   [CONSTRAINT <nombre-de-restricción>]       FOREIGN KEY (<atributo1,atributo2>)       REFERENCES <nombre-re-tabla-referenciada> (<clave referenciada>)   ``` |
+
+![desk1](/img/desk1.jpg)
