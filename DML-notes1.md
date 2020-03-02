@@ -58,7 +58,7 @@ En MariaDB "INTO" es opcional, en PostgreS es obligatorio.
 ```SQL
 INSERT INTO <nombre-de-tabla> 
 	( <atributo1>, <atributo2>, <valorN>...) 
-	{ SELECT...| VALUES (<valor1>, <valor2>, <vlalorN>), (valorX, <valorY>, <valorZ>)};
+	{ SELECT...| VALUES (<valor1>, <valor2>, <vlalorN>), (vl.X, <vl.Y>, <vl.Z>)};
 ```
 
 Ejemplo VALUES:
@@ -76,7 +76,7 @@ Ejemplo SELECT:
 
 ```SQL
 INSERT INTO world
-(name, continent, capital)
+		(name, continent, capital)
 SELECT nombre, continente, capitál-del-pais
 FROM mundo
 WHERE continent LIKE 'Europa';
@@ -88,9 +88,9 @@ Los atributos de INSERT y SELECT deben de pertenecer a mismos dominios y respeta
 
 ```SQL
 UPDATE <nombre-de-tabla>
-    SET 	<atributo1> = <valor1>,
-			<atributo2> = <valor2>
-			[WHERE <predicado>];
+	SET	<atributo1> = <valor1>,
+		<atributo2> = <valor2>
+		[WHERE <predicado>];
 ```
 
 Ejemplo:
@@ -99,7 +99,7 @@ Ejemplo:
 UPDATE world
 	SET 	continent = 'Africa'
 	WHERE 	name = 'Spain'
-	OR		name = 'Portugal';
+	OR	name = 'Portugal';
 ```
 
 **DELETE**- elimina las tuplas seleccionadas.
