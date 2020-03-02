@@ -49,8 +49,10 @@
 
 ----------
 
+[https://www.postgresql.org/docs/9.4/sql-insert.html](https://www.postgresql.org/docs/9.4/sql-insert.html "Referencias PostgreSQL")
 
 **INSERT**- Introduce valores para los atributos seleccionados. Pueden ser resultado de una consulta, valores por defecto, o valores escritos (coincidiendo en orden los valores con los atributos).
+
 En MariaDB "INTO" es opcional, en PostgreS es obligatorio.
 
 ```SQL
