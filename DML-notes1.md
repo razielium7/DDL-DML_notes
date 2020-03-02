@@ -58,7 +58,7 @@ INSERT INTO <nombre-de-tabla>
 	{ SELECT... | DEFAULT VALUES | VALUES (<valor1>, <valor2>, <vlalorN>), (valorX, <valorY>, <valorZ>)};
 ```
 
-Ejemplo:
+Ejemplo VALUES:
 
 ```SQL
 INSERT INTO world
@@ -69,6 +69,16 @@ VALUES
 ('Japan', 'Asia', 'Tokyo');
 ```
 
+Ejemplo VALUES_2:
+
+```SQL
+INSERT INTO world
+(name, continent, capital)
+SELECT nombre, continente, capitál-del-pais
+FROM mundo
+WHERE continent LIKE 'Europa';
+```
+Los atributos de INSERT y SELECT deben de pertenecer a mismos dominios y respetar la orden.
 
 **UPDATE**- actualiza.
 
