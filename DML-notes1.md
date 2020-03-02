@@ -58,7 +58,7 @@ En MariaDB "INTO" es opcional, en PostgreS es obligatorio.
 ```SQL
 INSERT INTO <nombre-de-tabla> 
 	( <atributo1>, <atributo2>, <valorN>...) 
-	{ SELECT... | DEFAULT VALUES | VALUES (<valor1>, <valor2>, <vlalorN>), (valorX, <valorY>, <valorZ>)};
+	{ SELECT...| VALUES (<valor1>, <valor2>, <vlalorN>), (valorX, <valorY>, <valorZ>)};
 ```
 
 Ejemplo VALUES:
@@ -83,15 +83,38 @@ WHERE continent LIKE 'Europa';
 ```
 Los atributos de INSERT y SELECT deben de pertenecer a mismos dominios y respetar la orden.
 
-**UPDATE**- actualiza.
+**UPDATE**- actualiza los atributos de las tuplas de la tabla.
+
 
 ```SQL
-
+UPDATE <nombre-de-tabla>
+    SET 	<atributo1> = <valor1>,
+			<atributo2> = <valor2>
+			[WHERE <predicado>];
 ```
 
-
-**DELETE**- elimina.
+Ejemplo:
 
 ```SQL
+UPDATE world
+	SET 	continent = 'Africa'
+	WHERE 	name = 'Spain'
+	OR		name = 'Portugal';
+```
 
+**DELETE**- elimina las tuplas seleccionadas.
+
+
+```SQL
+DELETE FROM <nombre-de-tabla>
+[WHERE <predicados>];
+```
+
+NO DEJAR EL PREDICADO VACIO, por muy opcional que sea!
+
+Ejemplo:
+
+```SQL
+DELETE FROM world
+WHERE continent LIKE 'Europe';
 ```
