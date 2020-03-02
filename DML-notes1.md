@@ -118,3 +118,10 @@ Ejemplo:
 DELETE FROM world
 WHERE continent LIKE 'Europe';
 ```
+
+
+----------
+![desk1](/img/desk3.jpg)
+
+
+----------
