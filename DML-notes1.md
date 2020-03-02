@@ -76,8 +76,8 @@ Ejemplo SELECT:
 
 ```SQL
 INSERT INTO world
-		(name, continent, capital)
-SELECT nombre, continente, capitál-del-pais
+	(name, continent, capital)
+SELECT 	nombre, continente, capitál-del-pais
 FROM mundo
 WHERE continent LIKE 'Europa';
 ```
