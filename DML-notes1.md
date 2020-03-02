@@ -125,3 +125,14 @@ WHERE continent LIKE 'Europe';
 
 
 ----------
+###Tipos de datos
+
+Numeros - INTEGER (entero)/ DECIMAL (preciso)/ REAL (no preciso)
+
+Texto - 
+
+CHAR (longitud fija)/ limite de max. longitud
+
+VARCHAR (longitud variable) / limite de max. longitud
+
+ TEXT (longitud variable) / illimitada
