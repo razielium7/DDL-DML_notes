@@ -42,4 +42,43 @@
 | **Clave ajena**     | establece restricciones sobre la clave ajena, solo puede tomar valores de la clave principal de referenciada o nulo                                                  |
 |                     | ```SQL   [CONSTRAINT <nombre-de-restricción>]       FOREIGN KEY (<atributo1,atributo2>)       REFERENCES <nombre-re-tabla-referenciada> (<clave referenciada>)   ``` |
 
+----------
+
+
 ![desk1](/img/desk1.jpg)
+
+----------
+
+
+**INSERT**- Introduce valores para los atributos seleccionados. Pueden ser resultado de una consulta, valores por defecto, o valores escritos (coincidiendo en orden los valores con los atributos).
+
+```SQL
+INSERT INTO <nombre-de-tabla> 
+	( <atributo1>, <atributo2>, <valorN>...) 
+	{ SELECT... | DEFAULT VALUES | VALUES (<valor1>, <valor2>, <vlalorN>), (valorX, <valorY>, <valorZ>)};
+```
+
+Ejemplo:
+
+```SQL
+INSERT INTO world
+(name, continent, capital)
+VALUES
+('Spain', 'Europe', 'Madrid')
+('Germany', 'Europe', 'Berlin')
+('Japan', 'Asia', 'Tokyo');
+```
+
+
+**UPDATE**- actualiza.
+
+```SQL
+
+```
+
+
+**DELETE**- elimina.
+
+```SQL
+
+```
