@@ -125,14 +125,20 @@ WHERE continent LIKE 'Europe';
 
 
 ----------
-###Tipos de datos
 
-Numeros - INTEGER (entero)/ DECIMAL (preciso)/ REAL (no preciso)
+### Tipos de datos
 
-Texto - 
 
-CHAR (longitud fija)/ limite de max. longitud
-
-VARCHAR (longitud variable) / limite de max. longitud
-
- TEXT (longitud variable) / illimitada
+| tipo de datos | desc.                                                |
+|---------------|------------------------------------------------------|
+| INTEGER       | número entero                                        |
+| DECIMAL       | número preciso                                       |
+| REAL          | número no preciso                                    |
+| -             | -                                                    |
+| CHAR          | texto de longitud fija (40 -> 40, ni más ni menos)   |
+| VARCHAR       | texto de longitud variable (40 -> 0-40)              |
+| TEXT          | texto de longitud ilimitada/ usar para descripciones |
+| -             | -                                                    |
+| DATE          | día, mes, año                                        |
+| TIME          | hora, minuto, segundo [zona horaria]                 |
+| TIMESTAMP     | DATE+TIME                                            |
