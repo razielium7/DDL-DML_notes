@@ -142,3 +142,18 @@ WHERE continent LIKE 'Europe';
 | DATE          | día, mes, año                                        |
 | TIME          | hora, minuto, segundo [zona horaria]                 |
 | TIMESTAMP     | DATE+TIME                                            |
+
+
+| BOOLEAN | desc.                                        |
+|---------|----------------------------------------------|
+| TRUE    | verdadero                                    |
+| FALSE   | falso                                        |
+| NULL    | nulo                                         |
+| -       | -                                            |
+| MONEY   | evita problemas como 0.1+0.2=3.0...04        |
+| -       | -                                            |
+| UUID    | identificador universal único (programación) |
+| JSON    | java script object notation                  |
+| XML     | extensible markup                            |
+| CIDR    | classless interdomain routing                |
+| INET    | direccionamiento IpV4 / IpV6                 |
