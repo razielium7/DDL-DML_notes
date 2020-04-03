@@ -13,14 +13,15 @@
 
 
 
-#DML 
+# DML 
 
 
 
 ![desk1](/img/desk1.jpg)
 
 ----------
-##INSERT
+## INSERT
+
 ["Referencias PostgreSQL"](https://www.postgresql.org/docs/9.4/sql-insert.html "Referencias PostgreSQL")
 
 **INSERT**- Introduce valores para los atributos seleccionados. Pueden ser resultado de una consulta, valores por defecto, o valores escritos (coincidiendo en orden los valores con los atributos).
@@ -55,7 +56,7 @@ WHERE continent LIKE 'Europa';
 ```
 Los atributos de INSERT y SELECT deben de pertenecer a mismos dominios y respetar la orden.
 
-##UPDATE
+## UPDATE
 
 **UPDATE**- actualiza los atributos de las tuplas de la tabla.
 
@@ -77,7 +78,7 @@ UPDATE world
 ```
 
 
-##DELETE
+## DELETE
 **DELETE**- elimina las tuplas seleccionadas.
 
 
@@ -102,7 +103,7 @@ WHERE continent LIKE 'Europe';
 
 ----------
 
-#Tipos de datos
+# Tipos de datos
 
 
 | tipo de datos | desc.                                                |
@@ -137,10 +138,10 @@ WHERE continent LIKE 'Europe';
 
 
 ----------
-#DDL - Data Definition Language
+# DDL - Data Definition Language
 
 
-##  Restricciones
+## Restricciones
 
 **Clave principal**- convierte el atributo en la clave primaria aplicando restricciones implícitas de unicidad y obligatoriedad.
 
@@ -156,7 +157,9 @@ Puede definirse en la misma estrofa que el atributo o posteriormente como CONSTR
 ```sql
 CREATE TABLE alumnos (
 	nombre VARCHAR(20) PRIMARY KEY;
-);```
+);
+```
+
 
 
 **Unicidad**  - obligación de un atributo a ser único e irrepetible.
@@ -217,7 +220,7 @@ A la hora de la creación de tabla condicionamos las fechas, prohibiendo que la 
 Comando para crear bases de datos, esquemas, tablas y dominios.
 
 
-####**Crear base de datos:**
+#### **Crear base de datos:**
 
 ```SQL
 CREATE DATABASE <nombre>;
@@ -230,7 +233,7 @@ Opcionalmente podemes emplear ```IF NOT EXISTS``` para evitar errores por coinci
 CREATE DATABASE [IF NOT EXIST] <nombre>;
 ```
 
-####De misma forma se crearia un **esquema:** 
+#### De misma forma se crearia un **esquema:** 
 
 ```SQL
 CREATE SCHEMA [IF NOT EXIST] <nombre>;
@@ -257,14 +260,18 @@ CREATE DOMAIN tipoDNI CHAR(9);
 
 Durante la creación de tabla podemos especificar las los atributos, su tipo de datos y restricciones. Tambien podemos introducir los "CHECK" y "CONSTRAINT" a la hora de crear una tabla.
 
+
  ```sql
 	 CREATE TABLE <nombre> (
 	 <nombre_atributo1> <tipo_dato> <restricción> ,
-	<nombre_atributo2> <tipo_dato> <restricción> ,
-	[CONSTRAINT]
+	 <nombre_atributo2> <tipo_dato> <restricción> ,
+	 [CONSTRAINT]
 );```
 
+
 Ejemplo:
+
+
  ```sql
 	 CREATE TABLE personal (
 	 apellido VARCHAR(30) NOT NULL,
@@ -277,14 +284,18 @@ Ejemplo:
 
 
 ## DROP
+
+
 Comando para la eliminación de tablas, bases de datos y esquemas.
+
 
 **Base de datos**:
 
  ```sql
 	 DROP DATABASE <nombre-de-BD-existente>
-	[CASCADE | RESTRICT ] ;
+	[CASCADE | RESTRICT ];
 ```
+
 
 **Esquema**:
 
@@ -292,6 +303,7 @@ Comando para la eliminación de tablas, bases de datos y esquemas.
 	 DROP SCHEMA <nombre-de-schema-existente>
 	[CASCADE | RESTRICT ] ;
 ```
+
 
 **Tabla**:
 
@@ -320,8 +332,7 @@ Comando para modificar una tabla, renombrar la tabla o sus columnas, agegar/quit
 ALTER TABLE <nombre-de-tabla-existente>
     [RENAME TO <nombre-nuevo>],
     [RENAME COLUMN <nombre-de-columna> TO <nombre-nuevo>],
-    [ADD | DROP [COLUMN | CONSTRAINT] <nombre>] 
-;
+    [ADD | DROP [COLUMN | CONSTRAINT] <nombre>];
 ```
 
 Ejemplos:
@@ -355,8 +366,7 @@ Hemos anulado la restricción de la clave principal.
 ```sql
 ALTER TABLE personal
     ADD CONSTRAINT PK_compuesta
-    PRIMARY KEY (dni,departamento)
-;
+    PRIMARY KEY (dni,departamento);
 ```
 Hemos agregado nueva clave principal compuesta por "dni" y "departamento"
 
