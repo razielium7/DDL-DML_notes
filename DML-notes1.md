@@ -266,7 +266,8 @@ Durante la creación de tabla podemos especificar las los atributos, su tipo de 
 	 <nombre_atributo1> <tipo_dato> <restricción> ,
 	 <nombre_atributo2> <tipo_dato> <restricción> ,
 	 [CONSTRAINT]
-);```
+);
+```
 
 
 Ejemplo:
@@ -280,7 +281,8 @@ Ejemplo:
 	 CONSTRAINT PK_att
 	 PRIMARY KEY (dni),
 	 CHECK (sueldo => 0)
-);```
+);
+```
 
 
 ## DROP
