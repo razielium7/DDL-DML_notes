@@ -1,3 +1,4 @@
+## Índice:
 
   - [DML](#DML)
     - [INSERT](#INSERT)
@@ -14,10 +15,6 @@
 
 
 # DML 
-
-
-
-![desk1](/img/desk1.jpg)
 
 ----------
 ## INSERT
@@ -375,3 +372,4 @@ Hemos agregado nueva clave principal compuesta por "dni" y "departamento"
 
 - Nota importante! ```A la hora de establecer clave ajena es necesario definir su comportamiento respeto a la modificación de la clave referenciada```
 
+![desk1](/img/desk1.jpg)
